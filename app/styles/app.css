@@ -1,9 +1,8 @@
-#footer
-{
-	background-color: #f5f5f5;
+#container-top-margin{
+	margin-top: 50px;
 }
-
-#main
-{
-	padding-top:50px;
+.news-portrait{
+	max-width: 50%;
+	height: 200px;
+	overflow: hidden;
 }

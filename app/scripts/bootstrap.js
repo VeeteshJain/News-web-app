@@ -3,17 +3,22 @@ require.config({
 	paths: {
 		'angular': '/bower_components/angular/angular',
 		'angular-route': '/bower_components/angular-route/angular-route',
-		'bootstrap': '/bower_components/bootstrap/dist/js/bootstrap',
-		'jquery': '/bower_components/jquery/dist/jquery'
+		'bootstrap3': '/bower_components/bootstrap/dist/js/bootstrap',
+		'jquery': '/bower_components/jquery/dist/jquery',
+		'xml2json': '../lib/xml2json',
+		'jquery.xml2json': '../lib/jquery.xml2json'
 	},
 	shim: {
 		'app': {
-			deps: ['angular', 'angular-route', 'bootstrap']
+			deps: ['angular', 'angular-route', 'bootstrap3', 'xml2json', 'jquery.xml2json']
 		},
 		'angular-route': {
 			deps: ['angular']
 		},
-		'bootstrap': {
+		'bootstrap3': {
+			deps: ['jquery']
+		},
+		'jquery.xml2json': {
 			deps: ['jquery']
 		}
 	}

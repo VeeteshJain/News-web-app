@@ -1,0 +1,13 @@
+<div ng-controller="trendingStores">
+	<h1>{{newsData.channel.pubDate}}</h1>
+	<ul class="list-inline">
+		<li data-ng-repeat="item in newsData.channel.item" class="news-portrait">
+			<div class="container-fluid">
+				<a data-ng-href="item.link">{{item.title}}</a>
+				<h6>{{item.pubDate}}</h6>
+				<div data-bind-html-unsafe="item.description"></div>
+			</div>
+		</br>
+	</li>
+</ul>
+</div>

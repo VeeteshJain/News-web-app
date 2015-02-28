@@ -2,12 +2,24 @@ define([
     ], function()
     {
         return {
-            defaultRoutePath: '/',
+            defaultRoutePath: '/top',
             routes: {
-                '/': {
-                    templateUrl: '/views/home.html',
+                '/top': {
+                    templateUrl: '/views/topStores.html',
                     dependencies: [
-                    'controllers/HomeViewController'
+                    'controllers/topStoresCtrl'
+                    ]
+                },
+                '/latest': {
+                    templateUrl: '/views/latestStores.html',
+                    dependencies: [
+                    'controllers/latestStoresCtrl'
+                    ]
+                },
+                '/trending': {
+                    templateUrl: '/views/trendingStores.html',
+                    dependencies: [
+                    'controllers/trendingStoresCtrl'
                     ]
                 }
             }
