@@ -1,5 +1,17 @@
 # News-web-app
 ====================================================
+Installation
+1. npm install
+2. bower install
+3. node server.js
+4. navigate to http://localhost:3000/top
+
+NOTE:- since news API dosent support CROSS doamin request so you needs to use chrome extention CORS to run this application.
+1. install this chrome extention.
+https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
+2. run application.
+
+
 Requirements
 
 
