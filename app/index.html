@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" >
-    <link rel="stylesheet" href="/styles/app.css"/>
-    <title>News-web-app</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" >
+  <link rel="stylesheet" href="/styles/app.css"/>
+  <title>News-web-app</title>
+  <base href="/">
 </head>
 <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">News-web-app</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">News-web-app</a>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">News-web-app</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">News-web-app</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#top">Top Stores</a></li>
-            <li><a href="#latest">Latest Stories</a></li>
-            <li><a href="#trending">Trending Stories</a></li>
+          <li data-ng-class="currentNews === 'top'? 'active' : ''" data-ng-click="currentNews = 'top'"><a href="/top">Top Stores</a></li>
+          <li data-ng-class="currentNews === 'latest' ? 'active' : ''" data-ng-click="currentNews = 'latest'"><a href="/latest">Latest Stories</a></li>
+          <li data-ng-class="currentNews === 'trending' ? 'active' : ''" data-ng-click="currentNews = 'trending'"><a href="/trending">Trending Stories</a></li>
         </ul>
-    </div><!--/.nav-collapse -->
-</div>
-</nav>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
 
-<div class="container" id="container-top-margin">
+  <div class="container" id="container-top-margin">
     <div data-ng-view></div>
-</div>
+  </div>
 </div> <!-- /container -->
 
 

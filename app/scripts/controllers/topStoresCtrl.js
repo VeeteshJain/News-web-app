@@ -5,8 +5,11 @@ define(['app', 'services/newsStoresSvs'], function(app)
         '$scope',
         'newsStoresSvs',
         '$timeout',
-        function($scope, newsStoresSvs, $timeout)
+        '$rootScope',
+        function($scope, newsStoresSvs, $timeout, $rootScope)
         {
+            $rootScope.currentNews = 'top';
+            debugger;
             $timeout(function(){
                 $scope.getTopStories();
             }, 100, true);

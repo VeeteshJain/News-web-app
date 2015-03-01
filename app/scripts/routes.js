@@ -2,7 +2,7 @@ define([
     ], function()
     {
         return {
-            defaultRoutePath: '/top',
+            defaultRoutePath: '/',
             routes: {
                 '/top': {
                     templateUrl: '/views/topStores.html',
